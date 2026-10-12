@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520">
+<rect width="960" height="520" rx="12" fill="#0d1117"/>
+<text x="480" y="34" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="20" font-weight="bold" fill="#e6edf3">HiddenTextKit</text>
+<text x="480" y="56" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#8b949e">invisible Unicode found, judged in context, decoded, and handled by policy</text>
+<g font-family="Helvetica,Arial,sans-serif" font-size="13">
+<text x="30" y="96" fill="#8b949e" font-weight="bold">Where text enters</text>
+<rect x="30" y="108" width="170" height="40" rx="8" fill="#161b22" stroke="#30363d"/><text x="115" y="133" text-anchor="middle" fill="#e6edf3">user input</text>
+<rect x="30" y="158" width="170" height="40" rx="8" fill="#161b22" stroke="#30363d"/><text x="115" y="183" text-anchor="middle" fill="#e6edf3">tool result</text>
+<rect x="30" y="208" width="170" height="40" rx="8" fill="#161b22" stroke="#30363d"/><text x="115" y="233" text-anchor="middle" fill="#e6edf3">retrieved document</text>
+<rect x="30" y="258" width="170" height="40" rx="8" fill="#161b22" stroke="#30363d"/><text x="115" y="283" text-anchor="middle" fill="#e6edf3">streamed model output</text>
+<path d="M200 203 L246 203" stroke="#58a6ff" stroke-width="2" fill="none"/><path d="M246 197 L256 203 L246 209 Z" fill="#58a6ff"/>
+<rect x="258" y="96" width="300" height="214" rx="10" fill="#0f2a44" stroke="#58a6ff"/>
+<text x="408" y="120" text-anchor="middle" fill="#e6edf3" font-weight="bold">HiddenTextScanner</text>
+<text x="274" y="148" fill="#c9d1d9">1. maximal runs of hidden scalars,</text>
+<text x="290" y="166" fill="#c9d1d9">across all six classes at once</text>
+<text x="274" y="194" fill="#c9d1d9">2. RunJudge: the visible neighbours,</text>
+<text x="290" y="212" fill="#c9d1d9">flag shape, isolate pairs, text start</text>
+<text x="274" y="240" fill="#c9d1d9">3. PayloadDecoder: Unicode tags &#183;</text>
+<text x="290" y="258" fill="#c9d1d9">selector bytes &#183; zero-width binary</text>
+<text x="408" y="292" text-anchor="middle" fill="#79c0ff">&#8594; HiddenTextReport (runs, verdicts, payloads)</text>
+<path d="M558 203 L604 203" stroke="#58a6ff" stroke-width="2" fill="none"/><path d="M604 197 L614 203 L604 209 Z" fill="#58a6ff"/>
+<rect x="616" y="96" width="314" height="100" rx="10" fill="#2a1f0f" stroke="#d29922"/>
+<text x="773" y="120" text-anchor="middle" fill="#e6edf3" font-weight="bold">HiddenTextPolicy</text>
+<text x="632" y="146" fill="#c9d1d9">legitimate &#8594; keep</text>
+<text x="632" y="166" fill="#c9d1d9">suspicious &#8594; strip &#160;&#160;(or reveal / refuse)</text>
+<text x="632" y="186" fill="#c9d1d9">decodes to a message &#8594; strip / refuse</text>
+<rect x="616" y="210" width="152" height="100" rx="10" fill="#122117" stroke="#3fb950"/>
+<text x="692" y="236" text-anchor="middle" fill="#e6edf3" font-weight="bold">Sanitizer</text>
+<text x="692" y="260" text-anchor="middle" fill="#c9d1d9">whole text</text>
+<text x="692" y="280" text-anchor="middle" fill="#c9d1d9">&#8594; SanitizedText</text>
+<rect x="778" y="210" width="152" height="100" rx="10" fill="#122117" stroke="#3fb950"/>
+<text x="854" y="236" text-anchor="middle" fill="#e6edf3" font-weight="bold">StreamFilter</text>
+<text x="854" y="260" text-anchor="middle" fill="#c9d1d9">chunk by chunk,</text>
+<text x="854" y="280" text-anchor="middle" fill="#c9d1d9">same result</text>
+<text x="30" y="350" fill="#8b949e" font-weight="bold">What comes out</text>
+<rect x="30" y="362" width="290" height="64" rx="8" fill="#161b22" stroke="#30363d"/>
+<text x="46" y="388" fill="#e6edf3">.standard &#8212; text for the model</text>
+<text x="46" y="408" fill="#8b949e">and the screen; flags and joiners kept</text>
+<rect x="335" y="362" width="290" height="64" rx="8" fill="#161b22" stroke="#30363d"/>
+<text x="351" y="388" fill="#e6edf3">.matching &#8212; view for detectors</text>
+<text x="351" y="408" fill="#8b949e">PII regexes and keyword filters</text>
+<rect x="640" y="362" width="290" height="64" rx="8" fill="#161b22" stroke="#30363d"/>
+<text x="656" y="388" fill="#e6edf3">.strict &#8212; refusal, with the</text>
+<text x="656" y="408" fill="#8b949e">stripped text offered as the way on</text>
+<rect x="30" y="444" width="900" height="54" rx="10" fill="#1f1530" stroke="#a371f7"/>
+<text x="480" y="467" text-anchor="middle" fill="#e6edf3" font-weight="bold">HiddenTextLedger (actor)</text>
+<text x="480" y="487" text-anchor="middle" fill="#c9d1d9">tallies per source &#183; recent decoded payloads &#183; safe under concurrent sends, tool calls and streams</text>
+</g>
+</svg>
